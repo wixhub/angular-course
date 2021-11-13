@@ -1,1 +1,16 @@
-<p>course-card works!</p>
+<div *ngIf="course" [ngClass]="cardClasses()" class="course-card">
+  <div class="course-title">
+    {{ cardIndex +' '+ course.description }}
+  </div>
+  <img *ngIf="ifImgVisible(); else noImage;" width="300" alt="Angular Logo" [src]="course.iconUrl" />
+
+  <ng-temlate #noImage>
+    <p>No image is avaible</p>
+  </ng-temlate>
+
+  <div class="course-description">
+    {{ course.longDescription }}
+  </div>
+
+  <button (click)="onCourseViewed()" >View Course</button>
+</div>
