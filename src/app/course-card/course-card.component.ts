@@ -26,14 +26,17 @@ export class CourseCardComponent implements OnInit {
     console.log("card after");
   }
 
-  ifImgVisible() {
+  isImgVisible() {
     return this.course && this.course.iconUrl;
   }
 
   cardClasses() {
-    if(this.course.category == "BEGINNER"){
-      return 'beginner';
+    if (this.course.category == "BEGINNER") {
+      return "beginner";
     }
+  }
 
+  cardStyles() {
+    return { "background-image": "url(" + this.course.iconUrl + ")", "color": "white" };
   }
 }

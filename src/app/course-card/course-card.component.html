@@ -1,16 +1,21 @@
-<div *ngIf="course" [ngClass]="cardClasses()" class="course-card">
-  <div class="course-title">
-    {{ cardIndex +' '+ course.description }}
+<div *ngIf="course" class="course-card" [ngClass]="cardClasses()">
+  <div class="course-title" [ngStyle]="cardStyles()">
+    {{ cardIndex + " " + course.description }}
   </div>
-  <img *ngIf="ifImgVisible(); else noImage;" width="300" alt="Angular Logo" [src]="course.iconUrl" />
+  <img
+    *ngIf="isImgVisible(); else noImage"
+    width="300"
+    alt="Angular Logo"
+    [src]="course.iconUrl"
+  />
 
-  <ng-temlate #noImage>
-    <p>No image is avaible</p>
-  </ng-temlate>
+  <ng-template #noImage>
+    <p>No image is available.</p>
+  </ng-template>
 
   <div class="course-description">
     {{ course.longDescription }}
   </div>
 
-  <button (click)="onCourseViewed()" >View Course</button>
+  <button (click)="onCourseViewed()">View Course</button>
 </div>
