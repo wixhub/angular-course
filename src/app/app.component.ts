@@ -34,4 +34,11 @@ export class AppComponent implements OnInit {
     //   .get("/api/courses", { params })
     //   .subscribe((val) => (this.courses = val));
   }
+
+  save(course:Course) {
+    this.coursesService.saveCourse(course)
+    .subscribe(
+      () => console.log('Course saved!')
+    );
+  }
 }
