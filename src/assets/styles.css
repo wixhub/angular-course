@@ -38,13 +38,8 @@ button {
 }
 
 course-card.is-first {
-  border-top: 2px solid grey;
-  padding-top: 20px;
-}
-
-course-card.is-last {
-  border-bottom: 2px solid grey;
-  padding-top: 20px;
+  border-top: 1px solid grey;
+  margin-top: 20px;
 }
 
 course-card.is-even {
@@ -53,6 +48,11 @@ course-card.is-even {
 
 course-card.is-odd {
   background: lightcyan;
+}
+
+course-card.is-last {
+  border-bottom: 1px solid grey;
+  background-color: #fff;
 }
 
 .course-category {
