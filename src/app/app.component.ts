@@ -10,6 +10,7 @@ import { Course } from "./model/course";
 export class AppComponent {
   courses = COURSES;
   title = COURSES[0].description;
+  demo: boolean = false;
   price = 9.99242346;
   startDate = new Date(2000, 0, 1);
   rate = 0.67;
