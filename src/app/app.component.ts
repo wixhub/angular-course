@@ -8,13 +8,17 @@ import { Course } from "./model/course";
   styleUrls: ["./app.component.css"],
 })
 export class AppComponent {
+
   courses = COURSES;
-  title = COURSES[0].description;
-  demo: boolean = false;
-  price = 9.99242346;
-  startDate = new Date(2000, 0, 1);
-  rate = 0.67;
   course = COURSES[0];
+
+  PipeDemo: boolean = true;
+  startDate = new Date(2000, 0, 1);
+  title = COURSES[0].description;
+  price = 9.99242346;
+  rate = 0.67;
+  JSONpipe: boolean = true;
+  KeyValuePairPipe: boolean = true;
 
   onCourseSelected(course: Course) {
     console.log("app");

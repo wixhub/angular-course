@@ -5,9 +5,9 @@
   />
 </div>
 
-<ng-container *ngIf="demo">
+<ng-container *ngIf="PipeDemo">
   <div class="demo">
-    <div>Start date: {{ startDate | date: "MMM dd yyyy" }}</div>
+    <div>Start date [Use Pipe]: {{ startDate | date: "MMM dd yyyy" }}</div>
     <div>{{ title | uppercase }}</div>
     <div>{{ title | titlecase }}</div>
     <div>{{ title | lowercase }}</div>
@@ -17,9 +17,13 @@
     <div>{{ price | currency: "GBP" }}</div>
     <div>Rescentage: {{ rate | percent }}</div>
   </div>
+</ng-container>
 
+<ng-container *ngIf="JSONpipe">
   {{ courses | json }}
+</ng-container>
 
+<ng-container *ngIf="KeyValuePairPipe">
   <div *ngFor="let pair of course | keyvalue">
     {{ pair.key + ": " + pair.value }}
   </div>
